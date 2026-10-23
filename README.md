@@ -21,7 +21,7 @@ A converter script reads your own copies of Driver Parallel Lines and Driv3r and
 
 ## How it works
 1. **Convert**: `Convert-Miami.ps1` runs a set of Python scripts on your own game files. They read Driv3r's Miami (models, textures, collision, roads, cars, animations, Tanner) and write it in Parallel Lines' file formats next to the original files: a Miami city file, a vehicle pack with the Driv3r cars, a Tanner character pack, an animation bank, a HUD, an overhead map and the title menu entry. Your original files are not touched.
-2. **Hook**: `DPLHookExtended.asi` is a plugin that Parallel Lines loads at start-up (through DPLHook's loader). It adds the D3 DLC entry to the title menu, tells the game to use the converted files for Miami, and runs the extras: Driv3r handling and damage, Driv3r moves, weather, time of day, cameras and the hook window.
+2. **Hook**: `DPLHookExtended.asi` is a plugin that Parallel Lines loads at start-up (through an ASI loader). It adds the D3 DLC entry to the title menu, tells the game to use the converted files for Miami, and runs the extras: Driv3r handling and damage, Driv3r moves, weather, time of day, cameras and the hook window.
 3. **Play**: start the game, choose **D3 DLC**, then **Miami**. The window (F2) switches the extras on and off while you play.
 
 ## Status: beta 0.1
@@ -29,7 +29,7 @@ Only **Miami** is in this version. **Nice** and **Istanbul** are **coming soon**
 Expect rough edges in Miami too. This is the first public version and it grows step by step.
 
 ## What you need
-1. **Driver Parallel Lines** (PC) with [DPLHook by ermaccer](https://github.com/ermaccer/dplhook) installed (it brings the ASI loader).
+1. **Driver Parallel Lines** (PC) with an **ASI loader** in the game folder (a `dinput8.dll`, for example [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader)). It loads `.asi` plugins at start-up. [DPLHook](https://github.com/ermaccer/dplhook) brings one too, but you do not need DPLHook itself.
 2. **Driv3r** (PC), patched to **version 1.20**. Nothing of Driv3r is included here: the installer reads your own copy.
 3. **Python 3.10 or newer** from [python.org](https://www.python.org/downloads/). Tick **Add python.exe to PATH** in the installer.
    Then open PowerShell and run once: `python -m pip install numpy Pillow`
@@ -76,6 +76,6 @@ The converted files are `Cities\miami_pc.d4c`, `Vehicles\nyc_d3_vehicles.sp`, `C
 
 ## Credits and licence
 Made by **E75** (GitHub). Free for hobby use; if you use or build on it, credit E75.
-**Thank you, ermaccer**, for [DPLHook](https://github.com/ermaccer/dplhook), the original script hook for Driver Parallel Lines. This hook is built on it and would not exist without that work. It needs DPLHook to run.
+Thanks to ermaccer for [DPLHook](https://github.com/ermaccer/dplhook), the original script hook for Driver Parallel Lines. This hook runs with or without it.
 
 Driver Parallel Lines and Driv3r belong to Ubisoft and Reflections; this project is not affiliated with them and ships none of their files.

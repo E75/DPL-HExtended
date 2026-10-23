@@ -100,8 +100,8 @@ $drive = (Get-Item -LiteralPath $DplDir).PSDrive
 $freeGb = [math]::Round($drive.Free / 1GB, 1)
 Write-Check ($freeGb -ge $neededFreeGb) "$freeGb GB free on drive $($drive.Name):" "Only $freeGb GB free on drive $($drive.Name):, $neededFreeGb GB are needed."
 
-if (-not (Test-Path -LiteralPath (Join-Path $DplDir 'DPLHook.asi'))) {
-	Write-Host '  [!!] DPLHook.asi (by ermaccer, https://github.com/ermaccer/dplhook) is not in the game folder. Install it too, or the hook does not start.' -ForegroundColor Yellow
+if (-not (Test-Path -LiteralPath (Join-Path $DplDir 'dinput8.dll'))) {
+	Write-Host '  [!!] No dinput8.dll (an ASI loader) in the game folder. Install an ASI loader, for example Ultimate ASI Loader (https://github.com/ThirteenAG/Ultimate-ASI-Loader), or the hook does not start.' -ForegroundColor Yellow
 }
 
 Write-Host ''
