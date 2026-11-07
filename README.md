@@ -4,7 +4,7 @@
 
 ![Miami in Driver Parallel Lines](screenshots/miami-01.webp)
 
-This is a hobby project and an early beta. You may use it and build on it, but please mention **E75** (GitHub name) if you do.
+This is an early beta. Hobby project with an open licence: free to use, change and build on. If you use it, please mention **E75** (GitHub name).
 
 ## What it does
 A converter script reads your own copies of Driver Parallel Lines and Driv3r and builds Driv3r's Miami for Parallel Lines. A small hook (an ASI plugin) adds the extras and an in-game window.
@@ -75,7 +75,7 @@ The converted files are `Cities\miami_pc.d4c`, `Vehicles\nyc_d3_vehicles.sp`, `C
 `Overlays\HUD-MIAMI.*`, `Overlays\miami.map`, `GUI\D3FRONT.*` and the folder `Mods\Cars\D3`. Copy `levels.txt` back from `_backup\<date>\`.
 
 ## Credits and licence
-Made by **E75** (GitHub). Free for hobby use; if you use or build on it, credit E75.
+Made by **E75** (GitHub). Hobby project with an open licence: free to use, change and build on; if you use it, credit E75 (GitHub name).
 Thanks to ermaccer for [DPLHook](https://github.com/ermaccer/dplhook), the original script hook for Driver Parallel Lines. This hook runs with or without it.
 
 Driver Parallel Lines and Driv3r belong to Ubisoft and Reflections; this project is not affiliated with them and ships none of their files.
